@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pal_mail_project/screens/auth.dart';
+import 'package:pal_mail_project/screens/details.dart';
 import 'package:pal_mail_project/screens/home.dart';
 import 'package:pal_mail_project/screens/login.dart';
 import 'package:pal_mail_project/screens/new_inbox.dart';
-import 'package:pal_mail_project/screens/serach_filter.dart';
 import 'package:pal_mail_project/screens/sign_up.dart';
 import 'package:pal_mail_project/screens/splash.dart';
+import 'package:pal_mail_project/screens/status.dart';
 import 'package:pal_mail_project/widget/details_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: SearchFilter.id,
+          initialRoute: StatusScreen.id,
           routes: {
             SplachScreen.id: (context) => SplachScreen(),
             AuthScreen.id: (context) => AuthScreen(),
@@ -41,8 +41,7 @@ class MyApp extends StatelessWidget {
             HomeScreen.id: (context) => HomeScreen(),
             DetailsScreen.id: (context) => DetailsScreen(),
             NewInbox.id: (context) => NewInbox(),
-            SearchFilter.id:(context)=>SearchFilter()
-
+            StatusScreen.id: (context) => StatusScreen()
           },
         );
       },

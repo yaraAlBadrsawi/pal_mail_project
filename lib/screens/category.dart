@@ -17,6 +17,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
       backgroundColor: backgroundColor,
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TitleBar(title: 'Category'),
             Container(

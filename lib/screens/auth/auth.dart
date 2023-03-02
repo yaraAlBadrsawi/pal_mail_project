@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/screens/sign_up.dart';
 
-import '../utils/constant.dart';
-import 'login.dart';
+import '../../utils/constant.dart';
+import '../login.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
