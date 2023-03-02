@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pal_mail_project/utils/constant.dart';
 
-import 'auth.dart';
+import 'auth/auth.dart';
 
 class SplachScreen extends StatefulWidget {
-  const SplachScreen({Key? key}) : super(key: key);
   static const String id = 'SplachScreen';
+
+  const SplachScreen({Key? key}) : super(key: key);
 
   @override
   State<SplachScreen> createState() => _SplachScreenState();
@@ -31,7 +32,7 @@ class _SplachScreenState extends State<SplachScreen> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(end: Alignment.bottomLeft, colors: [
-           primaryColor,
+          primaryColor,
           Color(0xff6589FF),
         ])),
         child: Column(
