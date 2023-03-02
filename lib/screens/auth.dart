@@ -78,7 +78,7 @@ class _AuthScreenState extends State<AuthScreen> with TickerProviderStateMixin {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
-                      top: 130, right: 30, left: 30, bottom: 0),
+                      top: 170, right: 30, left: 30, bottom: 0),
                   child: Container(
                     height: _tabController.index == 1 ? 609.h : 620.h,
                     width: 367.w,

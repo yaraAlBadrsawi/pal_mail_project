@@ -7,7 +7,7 @@ import 'auth.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({Key? key}) : super(key: key);
-  static const id = 'SplachScreen';
+  static const String id = 'SplachScreen';
 
   @override
   State<SplachScreen> createState() => _SplachScreenState();
@@ -47,7 +47,7 @@ class _SplachScreenState extends State<SplachScreen> {
               ),
             ),
             SizedBox(
-              height: 27.h,
+              height: 30.h,
             ),
             Center(
                 child: Text(
