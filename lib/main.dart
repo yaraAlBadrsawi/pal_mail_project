@@ -7,6 +7,7 @@ import 'package:pal_mail_project/screens/login.dart';
 import 'package:pal_mail_project/screens/new_inbox.dart';
 import 'package:pal_mail_project/screens/sign_up.dart';
 import 'package:pal_mail_project/screens/splash.dart';
+import 'package:pal_mail_project/widget/details_screen.dart';
 
 
 void main() {

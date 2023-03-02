@@ -4,13 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/utils/constant.dart';
+import 'package:pal_mail_project/widget/details_screen.dart';
 
 import '../widget/tag_container.dart';
 import 'new_inbox.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
-  static const id = 'home';
+  static const String id = 'home';
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -241,10 +242,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 width: 8.w,
                               ),
-                              FaIcon(
-                                FontAwesomeIcons.angleRight,
-                                size: 12,
-                                color: subTitleColor,
+                              GestureDetector(
+                              onTap: () {
+    Navigator.pushReplacementNamed(context, DetailsScreen.id);
+    }
+                                ,child: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                  size: 12,
+                                  color: subTitleColor,
+                                ),
                               ),
                             ],
                           ),
