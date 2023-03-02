@@ -21,7 +21,7 @@ class _NewInboxState extends State<NewInbox> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Constant.backgroundColor,
+      backgroundColor: backgroundColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -39,7 +39,7 @@ class _NewInboxState extends State<NewInbox> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Constant.primaryColor.withOpacity(.1),
+                        color:primaryColor.withOpacity(.1),
                         blurRadius: 6.0,
                         spreadRadius: 1.0,
                         offset: Offset(0.0, 0.0), // soften the shadow
@@ -74,13 +74,13 @@ class _NewInboxState extends State<NewInbox> {
                           FaIcon(
                             FontAwesomeIcons.circleInfo,
                             size: 24.sp,
-                            color: Constant.seconderyColor,
+                            color: seconderyColor,
                           ),
                         ],
                       ),
                       Divider(
                         thickness: .3,
-                        color: Constant.subTitleColor,
+                        color: subTitleColor,
                       ),
                       Row(
                         children: [
@@ -95,7 +95,7 @@ class _NewInboxState extends State<NewInbox> {
                             'others',
                             style: GoogleFonts.poppins(
                                 fontSize: 14.0.sp,
-                                color: Constant.subTitleColor),
+                                color:subTitleColor),
                           ),
                           SizedBox(
                             width: 8.w,
@@ -103,7 +103,7 @@ class _NewInboxState extends State<NewInbox> {
                           FaIcon(
                             FontAwesomeIcons.angleRight,
                             size: 12,
-                            color: Constant.subTitleColor,
+                            color:subTitleColor,
                           ),
                         ],
                       ),
@@ -118,7 +118,7 @@ class _NewInboxState extends State<NewInbox> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Constant.primaryColor.withOpacity(.1),
+                        color: primaryColor.withOpacity(.1),
                         blurRadius: 6.0,
                         spreadRadius: 1.0,
                         offset: Offset(0.0, 0.0), // soften the shadow
@@ -140,13 +140,13 @@ class _NewInboxState extends State<NewInbox> {
                       ),
                       Divider(
                         thickness: .3,
-                        color: Constant.subTitleColor,
+                        color:subTitleColor,
                       ),
                       Text(
                         'Description',
                         style: GoogleFonts.poppins(
                           fontSize: 14.0.sp,
-                          color: Constant.subTitleColor,
+                          color: subTitleColor,
                         ),
                       ),
                     ],
@@ -160,7 +160,7 @@ class _NewInboxState extends State<NewInbox> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Constant.primaryColor.withOpacity(.1),
+                        color:primaryColor.withOpacity(.1),
                         blurRadius: 6.0,
                         spreadRadius: 1.0,
                         offset: Offset(0.0, 0.0), // soften the shadow
@@ -198,7 +198,7 @@ class _NewInboxState extends State<NewInbox> {
                                 'Tuesday, July 5, 2022',
                                 style: GoogleFonts.poppins(
                                   fontSize: 14.0.sp,
-                                  color: Constant.seconderyColor,
+                                  color:seconderyColor,
                                 ),
                               ),
                             ],
@@ -207,7 +207,7 @@ class _NewInboxState extends State<NewInbox> {
                       ),
                       Divider(
                         thickness: .3,
-                        color: Constant.subTitleColor,
+                        color: subTitleColor,
                       ),
                       Row(
                         children: [
@@ -234,7 +234,7 @@ class _NewInboxState extends State<NewInbox> {
                                 '2022/6019',
                                 style: GoogleFonts.poppins(
                                   fontSize: 14.0.sp,
-                                  color: Constant.seconderyColor,
+                                  color: seconderyColor,
                                 ),
                               ),
                             ],
@@ -254,7 +254,7 @@ class _NewInboxState extends State<NewInbox> {
                   borderRadius: BorderRadius.circular(50.r),
                   boxShadow: [
                     BoxShadow(
-                      color: Constant.primaryColor.withOpacity(.1),
+                      color: primaryColor.withOpacity(.1),
                       blurRadius: 6.0,
                       spreadRadius: 1.0,
                       offset: Offset(0.0, 0.0), // soften the shadow
@@ -293,7 +293,7 @@ class _NewInboxState extends State<NewInbox> {
                           icon: Icon(
                             Icons.arrow_forward_ios,
                             size: 14.sp,
-                            color: Constant.subTitleColor,
+                            color: subTitleColor,
                           ))
                     ],
                   ),
@@ -309,7 +309,7 @@ class _NewInboxState extends State<NewInbox> {
                   borderRadius: BorderRadius.circular(50.r),
                   boxShadow: [
                     BoxShadow(
-                      color: Constant.primaryColor.withOpacity(.1),
+                      color: primaryColor.withOpacity(.1),
                       blurRadius: 6.0,
                       spreadRadius: 1.0,
                       offset: Offset(0.0, 0.0), // soften the shadow
@@ -355,7 +355,7 @@ class _NewInboxState extends State<NewInbox> {
                           icon: Icon(
                             Icons.arrow_forward_ios,
                             size: 14.sp,
-                            color: Constant.subTitleColor,
+                            color: subTitleColor,
                           ))
                     ],
                   ),
@@ -368,7 +368,7 @@ class _NewInboxState extends State<NewInbox> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Constant.primaryColor.withOpacity(.1),
+                        color: primaryColor.withOpacity(.1),
                         blurRadius: 6.0,
                         spreadRadius: 1.0,
                         offset: Offset(0.0, 0.0), // soften the shadow
@@ -390,7 +390,7 @@ class _NewInboxState extends State<NewInbox> {
                         'Add Decision…',
                         style: GoogleFonts.poppins(
                           fontSize: 14.0.sp,
-                          color: Constant.subTitleColor,
+                          color: subTitleColor,
                         ),
                       ),
                     ],
@@ -404,7 +404,7 @@ class _NewInboxState extends State<NewInbox> {
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
-                        color: Constant.primaryColor.withOpacity(.1),
+                        color:primaryColor.withOpacity(.1),
                         blurRadius: 6.0,
                         spreadRadius: 1.0,
                         offset: Offset(0.0, 0.0), // soften the shadow
@@ -417,7 +417,7 @@ class _NewInboxState extends State<NewInbox> {
                   child: Text(
                     'Add Image',
                     style: GoogleFonts.poppins(
-                      color: Constant.seconderyColor,
+                      color: seconderyColor,
                       fontSize: 16.0.sp,
                     ),
                   ),
@@ -445,15 +445,15 @@ class _NewInboxState extends State<NewInbox> {
                         : FontAwesomeIcons.angleDown,
                     size: 16,
                     color: isExpanded2
-                        ? Constant.seconderyColor
-                        : Constant.subTitleColor,
+                        ? seconderyColor
+                        : subTitleColor,
                   ),
                   children: <Widget>[
                     Container(
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Constant.primaryColor.withOpacity(.1),
+                              color: primaryColor.withOpacity(.1),
                               blurRadius: 6.0,
                               spreadRadius: 1.0,
                               offset: Offset(0.0, 0.0), // soften the shadow
@@ -489,7 +489,7 @@ class _NewInboxState extends State<NewInbox> {
                                   'Today, 11:00 AM',
                                   style: GoogleFonts.poppins(
                                       fontSize: 12.0.sp,
-                                      color: Constant.subTitleColor),
+                                      color: subTitleColor),
                                 ),
                                 SizedBox(
                                   width: 8.w,
@@ -497,7 +497,7 @@ class _NewInboxState extends State<NewInbox> {
                                 FaIcon(
                                   FontAwesomeIcons.angleRight,
                                   size: 12,
-                                  color: Constant.subTitleColor,
+                                  color: subTitleColor,
                                 ),
                               ],
                             ),
@@ -510,7 +510,7 @@ class _NewInboxState extends State<NewInbox> {
                                     'The issue transferred to AAAA',
                                     style: GoogleFonts.poppins(
                                         fontSize: 14.0.sp,
-                                        color: Constant.subTitleColor),
+                                        color: subTitleColor),
                                   ),
                                 ],
                               ),
@@ -526,7 +526,7 @@ class _NewInboxState extends State<NewInbox> {
                       decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Constant.primaryColor.withOpacity(.1),
+                              color: primaryColor.withOpacity(.1),
                               blurRadius: 6.0,
                               spreadRadius: 1.0,
                               offset: Offset(0.0, 0.0), // soften the shadow
@@ -562,7 +562,7 @@ class _NewInboxState extends State<NewInbox> {
                                   'Today, 11:00 AM',
                                   style: GoogleFonts.poppins(
                                       fontSize: 12.0.sp,
-                                      color: Constant.subTitleColor),
+                                      color:subTitleColor),
                                 ),
                                 SizedBox(
                                   width: 8.w,
@@ -570,7 +570,7 @@ class _NewInboxState extends State<NewInbox> {
                                 FaIcon(
                                   FontAwesomeIcons.angleRight,
                                   size: 12,
-                                  color: Constant.subTitleColor,
+                                  color: subTitleColor,
                                 ),
                               ],
                             ),
@@ -583,7 +583,7 @@ class _NewInboxState extends State<NewInbox> {
                                     'The issue transferred to AAAA',
                                     style: GoogleFonts.poppins(
                                         fontSize: 14.0.sp,
-                                        color: Constant.subTitleColor),
+                                        color: subTitleColor),
                                   ),
                                 ],
                               ),
@@ -616,7 +616,7 @@ class _NewInboxState extends State<NewInbox> {
                         onPressed: () {},
                         icon: Icon(
                           FontAwesomeIcons.paperPlane,
-                          color: Constant.primaryColor,
+                          color: primaryColor,
                         )),
                     prefixIcon: Padding(
                       padding: EdgeInsets.only(right: 9.w, left: 16.w),
@@ -641,7 +641,7 @@ class _NewInboxState extends State<NewInbox> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.r),
                       borderSide: BorderSide(
-                        color: Constant.primaryColor,
+                        color: primaryColor,
                       ),
                     )),
               ),

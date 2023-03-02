@@ -62,7 +62,7 @@ class SignUp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(22),
                     gradient:
                         LinearGradient(begin: Alignment.bottomLeft, colors: [
-                      Constant.primaryColor,
+                      primaryColor,
                       Color(0xff6589FF),
                     ])),
               ),

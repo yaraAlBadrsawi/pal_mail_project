@@ -31,7 +31,7 @@ class _SplachScreenState extends State<SplachScreen> {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(end: Alignment.bottomLeft, colors: [
-          Constant.primaryColor,
+           primaryColor,
           Color(0xff6589FF),
         ])),
         child: Column(

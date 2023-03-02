@@ -26,21 +26,21 @@ class _DetailsScreenState extends State<DetailsScreen> {
         title: Text(
           'Home',
           style:
-              GoogleFonts.poppins(fontSize: 18, color: Constant.seconderyColor),
+              GoogleFonts.poppins(fontSize: 18, color: seconderyColor),
         ),
         leading: Icon(
           Icons.arrow_back_ios_sharp,
           size: 18.sp,
-          color: Constant.seconderyColor,
+          color: seconderyColor,
         ),
-        backgroundColor: Constant.backgroundColor,
+        backgroundColor: backgroundColor,
         actions: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: FaIcon(
               FontAwesomeIcons.ellipsis,
               size: 24.sp,
-              color: Constant.seconderyColor,
+              color: seconderyColor,
             ),
           ),
         ],
@@ -53,7 +53,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
               decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Constant.primaryColor.withOpacity(.1),
+                      color: primaryColor.withOpacity(.1),
                       blurRadius: 6.0,
                       spreadRadius: 1.0,
                       offset: Offset(0.0, 0.0), // soften the shadow
@@ -113,7 +113,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     ),
                     Divider(
                       thickness: .3,
-                      color: Constant.subTitleColor,
+                      color: subTitleColor,
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 0.h),
@@ -137,8 +137,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 : FontAwesomeIcons.angleDown,
                             size: 16,
                             color: isExpanded
-                                ? Constant.seconderyColor
-                                : Constant.subTitleColor,
+                                ? seconderyColor
+                                : subTitleColor,
                           ),
                           children: <Widget>[
                             SizedBox(
@@ -185,7 +185,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 borderRadius: BorderRadius.circular(50.r),
                 boxShadow: [
                   BoxShadow(
-                    color: Constant.primaryColor.withOpacity(.1),
+                    color: primaryColor.withOpacity(.1),
                     blurRadius: 6.0,
                     spreadRadius: 1.0,
                     offset: Offset(0.0, 0.0), // soften the shadow
@@ -232,7 +232,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 14.sp,
-                          color: Constant.subTitleColor,
+                          color: subTitleColor,
                         ))
                   ],
                 ),
@@ -248,7 +248,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 borderRadius: BorderRadius.circular(50.r),
                 boxShadow: [
                   BoxShadow(
-                    color: Constant.primaryColor.withOpacity(.1),
+                    color: primaryColor.withOpacity(.1),
                     blurRadius: 6.0,
                     spreadRadius: 1.0,
                     offset: Offset(0.0, 0.0), // soften the shadow
@@ -294,7 +294,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         icon: Icon(
                           Icons.arrow_forward_ios,
                           size: 14.sp,
-                          color: Constant.subTitleColor,
+                          color: subTitleColor,
                         ))
                   ],
                 ),
@@ -309,7 +309,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 borderRadius: BorderRadius.circular(30.r),
                 boxShadow: [
                   BoxShadow(
-                    color: Constant.primaryColor.withOpacity(.1),
+                    color: primaryColor.withOpacity(.1),
                     blurRadius: 6.0,
                     spreadRadius: 1.0,
                     offset: Offset(0.0, 0.0), // soften the shadow
@@ -365,7 +365,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 borderRadius: BorderRadius.circular(40.r),
                 boxShadow: [
                   BoxShadow(
-                    color: Constant.primaryColor.withOpacity(.1),
+                    color: primaryColor.withOpacity(.1),
                     blurRadius: 6.0,
                     spreadRadius: 1.0,
                     offset: Offset(0.0, 0.0), // soften the shadow
@@ -380,7 +380,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     Text(
                       'Add Image',
                       style: GoogleFonts.poppins(
-                        color: Constant.seconderyColor,
+                        color: seconderyColor,
                         fontSize: 16.0.sp,
                       ),
                     ),
@@ -503,15 +503,15 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       : FontAwesomeIcons.angleDown,
                   size: 16,
                   color: isExpanded2
-                      ? Constant.seconderyColor
-                      : Constant.subTitleColor,
+                      ? seconderyColor
+                      : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Constant.primaryColor.withOpacity(.1),
+                            color: primaryColor.withOpacity(.1),
                             blurRadius: 6.0,
                             spreadRadius: 1.0,
                             offset: Offset(0.0, 0.0), // soften the shadow
@@ -547,7 +547,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
                                     fontSize: 12.0.sp,
-                                    color: Constant.subTitleColor),
+                                    color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -555,7 +555,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               FaIcon(
                                 FontAwesomeIcons.angleRight,
                                 size: 12,
-                                color: Constant.subTitleColor,
+                                color: subTitleColor,
                               ),
                             ],
                           ),
@@ -568,7 +568,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   'The issue transferred to AAAA',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.subTitleColor),
+                                      color: subTitleColor),
                                 ),
                               ],
                             ),
@@ -584,7 +584,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Constant.primaryColor.withOpacity(.1),
+                            color: primaryColor.withOpacity(.1),
                             blurRadius: 6.0,
                             spreadRadius: 1.0,
                             offset: Offset(0.0, 0.0), // soften the shadow
@@ -620,7 +620,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
                                     fontSize: 12.0.sp,
-                                    color: Constant.subTitleColor),
+                                    color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -628,7 +628,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               FaIcon(
                                 FontAwesomeIcons.angleRight,
                                 size: 12,
-                                color: Constant.subTitleColor,
+                                color: subTitleColor,
                               ),
                             ],
                           ),
@@ -641,7 +641,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                   'The issue transferred to AAAA',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.subTitleColor),
+                                      color: subTitleColor),
                                 ),
                               ],
                             ),
@@ -674,7 +674,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       onPressed: () {},
                       icon: Icon(
                         FontAwesomeIcons.paperPlane,
-                        color: Constant.primaryColor,
+                        color: primaryColor,
                       )),
                   prefixIcon: Padding(
                     padding: EdgeInsets.only(right: 9.w, left: 16.w),
@@ -699,7 +699,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50.r),
                     borderSide: BorderSide(
-                      color: Constant.primaryColor,
+                      color: primaryColor,
                     ),
                   )),
             ),

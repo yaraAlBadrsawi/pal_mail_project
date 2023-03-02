@@ -57,7 +57,7 @@ class Login extends StatelessWidget {
                         end: Alignment.centerLeft,
                         begin: Alignment.centerRight,
                         colors: [
-                          Constant.primaryColor,
+                          primaryColor,
                           Color(0xff6589FF),
                         ])),
               ),

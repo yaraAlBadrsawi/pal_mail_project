@@ -41,14 +41,14 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     ];
     return Scaffold(
-      backgroundColor: Constant.backgroundColor,
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         scrolledUnderElevation: 0,
         leading: Icon(
           Icons.menu,
           color: Colors.black,
         ),
-        backgroundColor: Constant.backgroundColor,
+        backgroundColor: backgroundColor,
         actions: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Material(
               elevation: 2,
               borderRadius: BorderRadius.circular(50.r),
-              shadowColor: Constant.primaryColor.withOpacity(.2),
+              shadowColor: primaryColor.withOpacity(.2),
               child: TextField(
                 maxLines: null,
                 minLines: null,
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50.r),
                       borderSide: BorderSide(
-                        color: Constant.primaryColor,
+                        color: primaryColor,
                       ),
                     )),
               ),
@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Constant.primaryColor.withOpacity(.1),
+                          color: primaryColor.withOpacity(.1),
                           blurRadius: 6.0,
                           spreadRadius: 1.0,
                           offset: Offset(0.0, 0.0), // soften the shadow
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           '${cardData[index]['statues']}',
                           style: GoogleFonts.poppins(
-                              color: Constant.subTitleColor, fontSize: 18.sp),
+                              color: subTitleColor, fontSize: 18.sp),
                         )
                       ],
                     ),
@@ -193,15 +193,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       : FontAwesomeIcons.angleDown,
                   size: 16,
                   color: isExpanded
-                      ? Constant.seconderyColor
-                      : Constant.subTitleColor,
+                      ? seconderyColor
+                      : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Constant.primaryColor.withOpacity(.1),
+                            color: primaryColor.withOpacity(.1),
                             blurRadius: 6.0,
                             spreadRadius: 1.0,
                             offset: Offset(0.0, 0.0), // soften the shadow
@@ -236,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
                                     fontSize: 12.0.sp,
-                                    color: Constant.subTitleColor),
+                                    color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               FaIcon(
                                 FontAwesomeIcons.angleRight,
                                 size: 12,
-                                color: Constant.subTitleColor,
+                                color: subTitleColor,
                               ),
                             ],
                           ),
@@ -263,7 +263,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.seconderyColor),
+                                      color: seconderyColor),
                                 ),
                                 SizedBox(
                                   height: 8.h,
@@ -272,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   '#Urgent  #Egyptian Military',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.seconderyColor,
+                                      color: seconderyColor,
                                       fontWeight: FontWeight.w600),
                                 ),
                                 Row(
@@ -332,14 +332,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       '12 ',
                       style: GoogleFonts.poppins(
-                          color: Constant.subTitleColor,
+                          color: subTitleColor,
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     ),
                     FaIcon(
                       FontAwesomeIcons.angleRight,
                       size: 12,
-                      color: Constant.subTitleColor,
+                      color: subTitleColor,
                     ),
                   ],
                 ),
@@ -367,15 +367,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       : FontAwesomeIcons.angleDown,
                   size: 16,
                   color: isExpanded2
-                      ? Constant.seconderyColor
-                      : Constant.subTitleColor,
+                      ? seconderyColor
+                      : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Constant.primaryColor.withOpacity(.1),
+                            color: primaryColor.withOpacity(.1),
                             blurRadius: 6.0,
                             spreadRadius: 1.0,
                             offset: Offset(0.0, 0.0), // soften the shadow
@@ -410,7 +410,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
                                     fontSize: 12.0.sp,
-                                    color: Constant.subTitleColor),
+                                    color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -418,7 +418,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               FaIcon(
                                 FontAwesomeIcons.angleRight,
                                 size: 12,
-                                color: Constant.subTitleColor,
+                                color: subTitleColor,
                               ),
                             ],
                           ),
@@ -437,11 +437,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.seconderyColor),
+                                      color: seconderyColor),
                                 ),
                                 Divider(
                                   thickness: .3,
-                                  color: Constant.subTitleColor,
+                                  color: subTitleColor,
                                 ),
                               ],
                             ),
@@ -468,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
                                     fontSize: 12.0.sp,
-                                    color: Constant.subTitleColor),
+                                    color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -476,7 +476,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               FaIcon(
                                 FontAwesomeIcons.angleRight,
                                 size: 12,
-                                color: Constant.subTitleColor,
+                                color: subTitleColor,
                               ),
                             ],
                           ),
@@ -495,7 +495,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
                                       fontSize: 14.0.sp,
-                                      color: Constant.seconderyColor),
+                                      color: seconderyColor),
                                 ),
                               ],
                             ),
@@ -526,7 +526,7 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Constant.primaryColor.withOpacity(.1),
+                      color: primaryColor.withOpacity(.1),
                       blurRadius: 6.0,
                       spreadRadius: 1.0,
                       offset: Offset(0.0, 0.0), // soften the shadow
@@ -585,7 +585,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: FaIcon(
                       FontAwesomeIcons.circlePlus,
                       size: 24.sp,
-                      color: Constant.seconderyColor,
+                      color: seconderyColor,
                     ),
                   ),
                   GestureDetector(
@@ -597,7 +597,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: GoogleFonts.poppins(
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
-                        color: Constant.seconderyColor,
+                        color: seconderyColor,
                       ),
                     ),
                   )

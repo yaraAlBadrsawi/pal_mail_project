@@ -24,7 +24,7 @@ class CustomHeader extends StatelessWidget {
         Text(
           '$leading',
           style: GoogleFonts.poppins(
-              fontSize: 18.sp, color: Constant.seconderyColor),
+              fontSize: 18.sp, color: seconderyColor),
         ),
         Text(
           '$title',
@@ -39,7 +39,7 @@ class CustomHeader extends StatelessWidget {
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.w600,
               fontSize: 18.sp,
-              color: Constant.seconderyColor),
+              color: seconderyColor),
         ),
       ],
     );
