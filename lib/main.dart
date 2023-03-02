@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pal_mail_project/screens/auth.dart';
-import 'package:pal_mail_project/screens/details.dart';
+import 'package:pal_mail_project/screens/auth/auth.dart';
 import 'package:pal_mail_project/screens/home.dart';
 import 'package:pal_mail_project/screens/login.dart';
 import 'package:pal_mail_project/screens/new_inbox.dart';
