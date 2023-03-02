@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pal_mail_project/utils/constant.dart';
-import 'package:pal_mail_project/widget/custom_text_filed.dart';
-import 'package:pal_mail_project/widget/social.dart';
 
+import '../utils/constant.dart';
+import '../widget/custom_text_filed.dart';
+import '../widget/social.dart';
 import 'home.dart';
 
 class SignUp extends StatelessWidget {
@@ -52,16 +52,16 @@ class SignUp extends StatelessWidget {
                 height: 48.h,
                 child: Center(
                     child: Text(
-                      'SIGN UP',
-                      style: GoogleFonts.poppins(
-                        fontSize: 14.sp,
-                        color: Colors.white,
-                      ),
-                    )),
+                  'SIGN UP',
+                  style: GoogleFonts.poppins(
+                    fontSize: 14.sp,
+                    color: Colors.white,
+                  ),
+                )),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22),
                     gradient:
-                    LinearGradient(begin: Alignment.bottomLeft, colors: [
+                        LinearGradient(begin: Alignment.bottomLeft, colors: [
                       primaryColor,
                       Color(0xff6589FF),
                     ])),
