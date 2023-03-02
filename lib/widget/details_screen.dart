@@ -7,7 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../utils/constant.dart';
 
 class DetailsScreen extends StatefulWidget {
- static const  String id="DetailsScreen" ;
+  static const String id = "DetailsScreen";
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
@@ -24,8 +24,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
         scrolledUnderElevation: 0,
         title: Text(
           'Home',
-          style:
-              GoogleFonts.poppins(fontSize: 18, color: seconderyColor),
+          style: GoogleFonts.poppins(fontSize: 18, color: seconderyColor),
         ),
         leading: Icon(
           Icons.arrow_back_ios_sharp,
@@ -123,21 +122,179 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           initiallyExpanded: true,
                           onExpansionChanged: (bool expanding) =>
                               setState(() => this.isExpanded = expanding),
-                          title: Text(
-                            'Title of mail',
-                            style: GoogleFonts.poppins(
-                                color: Colors.black,
-                                fontSize: 20.0.sp,
-                                fontWeight: FontWeight.w600),
+                          title: InkWell(
+                            onTap: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  builder: (context) {
+                                    return Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color(0xFfF7F6FF),
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(10),
+                                              topRight: Radius.circular(10))),
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 15),
+                                      alignment: Alignment.center,
+                                      height: 270.h,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              const Text("      Title of Mail",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                      fontSize: 14,
+                                                      color:
+                                                          Color(0xFF272727))),
+                                              const Spacer(),
+                                              IconButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  icon:
+                                                      const Icon(Icons.close)),
+                                            ],
+                                          ),
+                                          const SizedBox(
+                                            height: 10,
+                                          ),
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                            topLeft: Radius
+                                                                .circular(10),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    10))),
+                                                padding:
+                                                    const EdgeInsets.all(20),
+                                                alignment: Alignment.center,
+                                                child: Column(
+                                                  children: const [
+                                                    Icon(
+                                                      Icons.archive_rounded,
+                                                      color: Color(0xFF7C7C7C),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Text(
+                                                      'Archive',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xFF7C7C7C),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.w400),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 20.w,
+                                              ),
+                                              Container(
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                            topLeft: Radius
+                                                                .circular(10),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    10))),
+                                                padding:
+                                                    const EdgeInsets.all(20),
+                                                alignment: Alignment.center,
+                                                child: Column(
+                                                  children: const [
+                                                    Icon(Icons.share_rounded,
+                                                        color:
+                                                            Color(0xFF6589FF)),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Text(
+                                                      'Share',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xFF6589FF),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.w400),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 20.w,
+                                              ),
+                                              Container(
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                            topLeft: Radius
+                                                                .circular(10),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    10))),
+                                                padding:
+                                                    const EdgeInsets.all(20),
+                                                alignment: Alignment.center,
+                                                child: Column(
+                                                  children: const [
+                                                    Icon(Icons.delete,
+                                                        color:
+                                                            Color(0xFFE62929)),
+                                                    SizedBox(
+                                                      height: 5,
+                                                    ),
+                                                    Text(
+                                                      'Delete',
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xFFE62929),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.w400),
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  });
+                            },
+                            child: Text(
+                              'Title of mail',
+                              style: GoogleFonts.poppins(
+                                  color: Colors.black,
+                                  fontSize: 20.0.sp,
+                                  fontWeight: FontWeight.w600),
+                            ),
                           ),
                           trailing: FaIcon(
                             isExpanded
                                 ? FontAwesomeIcons.angleUp
                                 : FontAwesomeIcons.angleDown,
                             size: 16,
-                            color: isExpanded
-                                ? seconderyColor
-                                : subTitleColor,
+                            color: isExpanded ? seconderyColor : subTitleColor,
                           ),
                           children: <Widget>[
                             SizedBox(
@@ -501,9 +658,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       ? FontAwesomeIcons.angleUp
                       : FontAwesomeIcons.angleDown,
                   size: 16,
-                  color: isExpanded2
-                      ? seconderyColor
-                      : subTitleColor,
+                  color: isExpanded2 ? seconderyColor : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
@@ -545,8 +700,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               Text(
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
-                                    fontSize: 12.0.sp,
-                                    color: subTitleColor),
+                                    fontSize: 12.0.sp, color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -566,8 +720,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 Text(
                                   'The issue transferred to AAAA',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 14.0.sp,
-                                      color: subTitleColor),
+                                      fontSize: 14.0.sp, color: subTitleColor),
                                 ),
                               ],
                             ),
@@ -618,8 +771,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               Text(
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
-                                    fontSize: 12.0.sp,
-                                    color: subTitleColor),
+                                    fontSize: 12.0.sp, color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -639,8 +791,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 Text(
                                   'The issue transferred to AAAA',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 14.0.sp,
-                                      color: subTitleColor),
+                                      fontSize: 14.0.sp, color: subTitleColor),
                                 ),
                               ],
                             ),

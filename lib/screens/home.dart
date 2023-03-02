@@ -193,9 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ? FontAwesomeIcons.angleUp
                       : FontAwesomeIcons.angleDown,
                   size: 16,
-                  color: isExpanded
-                      ? seconderyColor
-                      : subTitleColor,
+                  color: isExpanded ? seconderyColor : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
@@ -236,17 +234,17 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
-                                    fontSize: 12.0.sp,
-                                    color: subTitleColor),
+                                    fontSize: 12.0.sp, color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
                               ),
                               GestureDetector(
-                              onTap: () {
-    Navigator.pushReplacementNamed(context, DetailsScreen.id);
-    }
-                                ,child: FaIcon(
+                                onTap: () {
+                                  Navigator.pushReplacementNamed(
+                                      context, DetailsScreen.id);
+                                },
+                                child: FaIcon(
                                   FontAwesomeIcons.angleRight,
                                   size: 12,
                                   color: subTitleColor,
@@ -268,8 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 14.0.sp,
-                                      color: seconderyColor),
+                                      fontSize: 14.0.sp, color: seconderyColor),
                                 ),
                                 SizedBox(
                                   height: 8.h,
@@ -372,9 +369,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ? FontAwesomeIcons.angleUp
                       : FontAwesomeIcons.angleDown,
                   size: 16,
-                  color: isExpanded2
-                      ? seconderyColor
-                      : subTitleColor,
+                  color: isExpanded2 ? seconderyColor : subTitleColor,
                 ),
                 children: <Widget>[
                   Container(
@@ -415,8 +410,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
-                                    fontSize: 12.0.sp,
-                                    color: subTitleColor),
+                                    fontSize: 12.0.sp, color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -442,8 +436,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 14.0.sp,
-                                      color: seconderyColor),
+                                      fontSize: 14.0.sp, color: seconderyColor),
                                 ),
                                 Divider(
                                   thickness: .3,
@@ -473,8 +466,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 'Today, 11:00 AM',
                                 style: GoogleFonts.poppins(
-                                    fontSize: 12.0.sp,
-                                    color: subTitleColor),
+                                    fontSize: 12.0.sp, color: subTitleColor),
                               ),
                               SizedBox(
                                 width: 8.w,
@@ -500,8 +492,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   'And here excerpt of the mail, can added to this location. And we can do more to this like …',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 14.0.sp,
-                                      color: seconderyColor),
+                                      fontSize: 14.0.sp, color: seconderyColor),
                                 ),
                               ],
                             ),
