@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pal_mail_project/widget/custom_header.dart';
 import 'package:pal_mail_project/widget/tag_container.dart';
 import '../utils/constant.dart';
-import '../widget/title_bar.dart';
 
 class TagScreen extends StatelessWidget {
   static const String id = 'TagScreen';
@@ -15,7 +15,7 @@ class TagScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          TitleBar(title: 'Tages'),
+          CustomHeader(title: 'Tages'),
 
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),

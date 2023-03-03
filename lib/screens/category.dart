@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:pal_mail_project/widget/custom_header.dart';
 import '../utils/constant.dart';
-import '../widget/title_bar.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({Key? key}) : super(key: key);
@@ -20,7 +19,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TitleBar(title: 'Category'),
+            CustomHeader(title: 'Category'),
             SizedBox(
               height: 40,
             ),
