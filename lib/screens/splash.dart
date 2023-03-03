@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pal_mail_project/utils/constant.dart';
 
+import '../utils/prefs.dart';
 import 'auth/auth.dart';
+import 'home.dart';
 
 class SplachScreen extends StatefulWidget {
   static const String id = 'SplachScreen';
@@ -20,7 +22,9 @@ class _SplachScreenState extends State<SplachScreen> {
     Future.delayed(
       Duration(seconds: 3),
       () {
-        Navigator.pushReplacementNamed(context, AuthScreen.id);
+        String route =
+            SharedPrefController().LoggedIn ? HomeScreen.id : AuthScreen.id;
+        Navigator.pushReplacementNamed(context, route);
       },
     );
     super.initState();
