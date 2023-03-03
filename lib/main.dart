@@ -13,8 +13,11 @@ import 'package:pal_mail_project/screens/splash.dart';
 import 'package:pal_mail_project/screens/status.dart';
 import 'package:pal_mail_project/screens/tag_screen.dart';
 import 'package:pal_mail_project/screens/details_screen.dart';
+import 'package:pal_mail_project/utils/prefs.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPrefController().initPreferences();
   runApp(const MyApp());
 }
 
