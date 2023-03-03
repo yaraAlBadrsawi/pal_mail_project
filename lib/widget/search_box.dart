@@ -21,7 +21,7 @@ class SearchBox extends StatelessWidget {
             borderSide:
                 BorderSide(color: Colors.grey.withOpacity(0.5), width: 0.8),
             borderRadius: BorderRadius.all(
-              Radius.circular(24.r),
+              Radius.circular(34.r),
             ),
           ),
         ),

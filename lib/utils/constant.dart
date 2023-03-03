@@ -19,6 +19,15 @@ BoxDecoration roundedBox = BoxDecoration(
   ),
 );
 
+BoxDecoration inboxDecoration = BoxDecoration(boxShadow: [
+  BoxShadow(
+    color: primaryColor.withOpacity(.1),
+    blurRadius: 6.0,
+    spreadRadius: 1.0,
+    offset: const Offset(0.0, 0.0), // soften the shadow
+  ),
+], color: Colors.white, borderRadius: BorderRadius.circular(30.r));
+
 List<BoxShadow> shadow = [
   BoxShadow(
     color: blueLightColor.withOpacity(0.7),

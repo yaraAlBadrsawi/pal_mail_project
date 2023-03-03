@@ -21,7 +21,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -32,11 +31,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
-          ),
-          initialRoute: SearchScreen.id,
+          initialRoute: HomeScreen.id,
           routes: {
             SplachScreen.id: (context) => SplachScreen(),
             AuthScreen.id: (context) => AuthScreen(),
@@ -46,11 +41,11 @@ class MyApp extends StatelessWidget {
             DetailsScreen.id: (context) => DetailsScreen(),
             NewInbox.id: (context) => NewInbox(),
             StatusScreen.id: (context) => StatusScreen(),
-            CategoryScreen.id:(context)=> CategoryScreen(),
-            SearchFilter.id:(context)=> SearchFilter(),
-            TagScreen.id:(context)=>TagScreen(),
-            SenderSearch.id:(context)=>SenderSearch(),
-            SearchScreen.id:(context)=>SearchScreen()
+            CategoryScreen.id: (context) => CategoryScreen(),
+            SearchFilter.id: (context) => SearchFilter(),
+            TagScreen.id: (context) => TagScreen(),
+            SenderSearch.id: (context) => SenderSearch(),
+            SearchScreen.id: (context) => SearchScreen()
           },
         );
       },
