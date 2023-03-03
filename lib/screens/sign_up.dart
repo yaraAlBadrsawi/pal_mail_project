@@ -83,8 +83,8 @@ class _SignUpState extends State<SignUp> {
             SizedBox(
               height: 50.h,
             ),
-            GestureDetector(
-              onTap: () async {
+            TextButton(
+              onPressed: () async {
                 await _performRegister();
               },
               child: Container(

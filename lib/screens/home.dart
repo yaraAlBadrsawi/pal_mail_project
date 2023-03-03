@@ -1,12 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pal_mail_project/screens/category.dart';
 import 'package:pal_mail_project/utils/constant.dart';
-import 'package:pal_mail_project/screens/details_screen.dart';
-
 import '../widget/category_widget.dart';
 import '../widget/organization_name_box.dart';
 import '../widget/search_box.dart';
@@ -22,26 +18,31 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool isExpanded = false;
-  bool isExpanded2 = false;
+  final String organizationName = 'Organization Name',
+      date = 'Today, 11:00 AM',
+      other =
+          'And here excerpt of the mail, can added to this location. And we can do more to this like …',
+      subject = '  Here we add the subject',
+      tags = '#Urgent  #Egyptian Military',
+      image = 'images/example.jpg';
 
   @override
   Widget build(BuildContext context) {
     List<dynamic> cardData = [
       {
-        'color': Colors.red,
+        'color': redCatColor,
         'statues': 'Inbox',
       },
       {
-        'color': Colors.yellow,
+        'color': yellowCatColor,
         'statues': 'Pending',
       },
       {
-        'color': Colors.blue,
+        'color': blueLightColor,
         'statues': 'In progress',
       },
       {
-        'color': Colors.green,
+        'color': greenCatColor,
         'statues': 'Completed',
       },
     ];
@@ -87,35 +88,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 0),
-            child: Theme(
-              data: ThemeData().copyWith(dividerColor: Colors.transparent),
-              child: ExpansionTile(
-                initiallyExpanded: true,
-                title: Text(
-                  'Official Organization',
-                  style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontSize: 20.0.sp,
-                      fontWeight: FontWeight.w600),
-                ),
-                children: [
-                  Container(
-                    decoration: inboxDecoration,
-                    padding: const EdgeInsets.all(16),
-                    child: OrganizationNameBox(
-                      organizationName: 'Organization Name',
-                      date: 'Today, 11:00 AM',
-                      subject: 'Here we add the subject',
-                      other:
-                          'And here excerpt of the mail, can added to this location. And we can do more to this like …',
-                      isVisible: true,
-                      color: blueLightColor,
-                      tags: '#Urgent  #Egyptian Military',
-                      image: 'images/example.jpg',
-                    ),
-                  ),
-                ],
+            child: ExpansionTile(
+              initiallyExpanded: true,
+              title: Text(
+                'Official Organization',
+                style: GoogleFonts.poppins(
+                    color: Colors.black,
+                    fontSize: 20.0.sp,
+                    fontWeight: FontWeight.w600),
               ),
+              children: [
+                Container(
+                  decoration: inboxDecoration,
+                  padding: const EdgeInsets.all(16),
+                  child: OrganizationNameBox(
+                    organizationName: organizationName,
+                    date: date,
+                    subject: subject,
+                    other: other,
+                    isVisible: true,
+                    color: blueLightColor,
+                    tags: tags,
+                    image: image,
+                  ),
+                ),
+              ],
             ),
           ),
           Padding(
@@ -143,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w600),
                     ),
-                    FaIcon(
+                    const FaIcon(
                       FontAwesomeIcons.angleRight,
                       size: 12,
                       color: subTitleColor,
@@ -173,20 +170,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       children: [
                         OrganizationNameBox(
-                          organizationName: 'Organization Name',
-                          date: 'Today, 11:00 AM',
-                          subject: 'Here we add the subject',
-                          other:
-                              'And here excerpt of the mail, can added to this location. And we can do more to this like …',
+                          organizationName: organizationName,
+                          date: date,
+                          subject: subject,
+                          other: other,
                           isVisible: false,
                           color: redCatColor,
                         ),
                         OrganizationNameBox(
-                          organizationName: 'Organization Name',
-                          date: 'Today, 11:00 AM',
-                          subject: 'Here we add the subject',
-                          other:
-                              'And here excerpt of the mail, can added to this location. And we can do more to this like …',
+                          organizationName: organizationName,
+                          date: date,
+                          subject: subject,
+                          other: other,
                           isVisible: false,
                           color: yellowCatColor,
                         ),
@@ -212,17 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
             child: Container(
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: primaryColor.withOpacity(.1),
-                      blurRadius: 6.0,
-                      spreadRadius: 1.0,
-                      offset: Offset(0.0, 0.0), // soften the shadow
-                    ),
-                  ],
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(40.r)),
+              decoration: inboxDecoration,
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -230,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         TagContainer(
                           text: 'All Tags',
                         ),
@@ -245,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(
                       height: 8.h,
                     ),
-                    TagContainer(
+                    const TagContainer(
                       text: '#New ',
                     ),
                   ],
@@ -255,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             height: 57.h,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               border: Border(
                 top: BorderSide(
@@ -277,8 +262,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: seconderyColor,
                     ),
                   ),
-                  GestureDetector(
-                    onTap: () {
+                  TextButton(
+                    onPressed: () {
                       Navigator.pushNamed(context, NewInbox.id);
                     },
                     child: Text(
@@ -293,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

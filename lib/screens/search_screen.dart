@@ -16,13 +16,11 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  bool isExpanded = false;
-  bool isExpanded2 = false;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
         scrolledUnderElevation: 0,
         title: Text(
@@ -35,10 +33,9 @@ class _SearchScreenState extends State<SearchScreen> {
           color: seconderyColor,
         ),
       ),
-      body: Container (
+      body: Container(
         padding: const EdgeInsets.all(8.0),
         margin: const EdgeInsets.all(8.0),
-
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -90,24 +87,21 @@ class _SearchScreenState extends State<SearchScreen> {
               // ),
               ExpansionTile(
                 initiallyExpanded: true,
-                onExpansionChanged: (bool expanding) =>
-                    setState(() => this.isExpanded = expanding),
                 title: Text(
                   'Official Organization',
                   style: GoogleFonts.poppins(
-
                       fontSize: 18.0.sp, color: Color(0xffB2B2B2)),
                 ),
-                trailing:   TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "1 found",
-                            style: GoogleFonts.poppins(
-                              fontSize: 14.0.sp,
-                              color: Color(0xffB2B2B2),
-                            ),
-                          ),
-                        ),
+                // trailing: TextButton(
+                //   onPressed: () {},
+                //   child: Text(
+                //     "1 found",
+                //     style: GoogleFonts.poppins(
+                //       fontSize: 14.0.sp,
+                //       color: Color(0xffB2B2B2),
+                //     ),
+                //   ),
+                // ),
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
@@ -250,8 +244,6 @@ class _SearchScreenState extends State<SearchScreen> {
               // ),
               ExpansionTile(
                 initiallyExpanded: true,
-                onExpansionChanged: (bool expanding) =>
-                    setState(() => this.isExpanded2 = expanding),
                 title: Text(
                   'Others',
                   style: GoogleFonts.poppins(
@@ -259,8 +251,8 @@ class _SearchScreenState extends State<SearchScreen> {
                       fontSize: 20.0.sp,
                       fontWeight: FontWeight.w600),
                 ),
-                trailing:Text("2 found"),
-                children: <Widget>[
+                trailing: Text("2 found"),
+                children: [
                   Container(
                     decoration: BoxDecoration(
                         boxShadow: [
