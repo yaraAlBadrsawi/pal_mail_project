@@ -5,12 +5,14 @@ import 'package:pal_mail_project/screens/category.dart';
 import 'package:pal_mail_project/screens/home.dart';
 import 'package:pal_mail_project/screens/login.dart';
 import 'package:pal_mail_project/screens/new_inbox.dart';
+import 'package:pal_mail_project/screens/search_screen.dart';
+import 'package:pal_mail_project/screens/sender_search.dart';
 import 'package:pal_mail_project/screens/serach_filter.dart';
 import 'package:pal_mail_project/screens/sign_up.dart';
 import 'package:pal_mail_project/screens/splash.dart';
 import 'package:pal_mail_project/screens/status.dart';
 import 'package:pal_mail_project/screens/tag_screen.dart';
-import 'package:pal_mail_project/widget/details_screen.dart';
+import 'package:pal_mail_project/screens/details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          initialRoute: TagScreen.id,
+          initialRoute: SearchScreen.id,
           routes: {
             SplachScreen.id: (context) => SplachScreen(),
             AuthScreen.id: (context) => AuthScreen(),
@@ -46,7 +48,9 @@ class MyApp extends StatelessWidget {
             StatusScreen.id: (context) => StatusScreen(),
             CategoryScreen.id:(context)=> CategoryScreen(),
             SearchFilter.id:(context)=> SearchFilter(),
-            TagScreen.id:(context)=>TagScreen()
+            TagScreen.id:(context)=>TagScreen(),
+            SenderSearch.id:(context)=>SenderSearch(),
+            SearchScreen.id:(context)=>SearchScreen()
           },
         );
       },
