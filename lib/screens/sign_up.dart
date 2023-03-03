@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../api/Auth/auth_api_controller.dart';
+import '../model/user.dart';
 import '../utils/constant.dart';
 import '../widget/custom_text_filed.dart';
 import '../widget/social.dart';
@@ -76,14 +78,14 @@ class _SignUpState extends State<SignUp> {
             CustomTextFiled(
               hintText: 'Confirm password',
               obsecure: true,
-              controller: _passwordController,
+              controller: _ConfirmpasswordController,
             ),
             SizedBox(
               height: 50.h,
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.pushReplacementNamed(context, HomeScreen.id);
+              onTap: () async {
+                await _performRegister();
               },
               child: Container(
                 width: double.infinity,
@@ -142,5 +144,41 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
+  }
+
+  Future<void> _performRegister() async {
+    if (_checkData()) {
+      await _register();
+    }
+  }
+
+  bool _checkData() {
+    if (_nameController.text.isNotEmpty &&
+        _passwordController.text.isNotEmpty &&
+        _ConfirmpasswordController.text.isNotEmpty) {
+      return true;
+    }
+    print('empty dats : ${_nameController.text},,,${_passwordController.text}');
+    return false;
+  }
+
+  _register() async {
+    bool statues = await AuthApiController().register(
+      user: user,
+      BuildContext: context,
+    );
+    print(statues);
+    if (statues) {
+      Navigator.pushReplacementNamed(context, HomeScreen.id);
+    }
+  }
+
+  User get user {
+    User user = User();
+    user.email = _emailController.text;
+    user.name = _nameController.text;
+    user.password = _passwordController.text;
+    user.Conpassword = _ConfirmpasswordController.text;
+    return user;
   }
 }

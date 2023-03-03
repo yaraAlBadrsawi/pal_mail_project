@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/screens/home.dart';
 
+import '../api/Auth/auth_api_controller.dart';
 import '../utils/constant.dart';
 import '../widget/custom_text_filed.dart';
 import '../widget/social.dart';
@@ -61,8 +62,10 @@ class _LoginState extends State<Login> {
               height: 71.h,
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.pushReplacementNamed(context, HomeScreen.id);
+              onTap: () async {
+                print('data');
+
+                await _performLogin();
               },
               child: Container(
                 width: double.infinity,
@@ -123,5 +126,34 @@ class _LoginState extends State<Login> {
         ),
       ),
     );
+  }
+
+  Future<void> _performLogin() async {
+    if (_checkData()) {
+      await _login();
+    }
+  }
+
+  bool _checkData() {
+    if (_emailController.text.isNotEmpty &&
+        _passwordController.text.isNotEmpty) {
+      print('dats : ${_emailController.text},,,${_passwordController.text}');
+
+      return true;
+    }
+    print(
+        'empty dats : ${_emailController.text},,,${_passwordController.text}');
+
+    return false;
+  }
+
+  Future<void> _login() async {
+    bool statues = await AuthApiController().login(
+        email: _emailController.text,
+        password: _passwordController.text,
+        BuildContext: context);
+    if (statues) {
+      Navigator.pushReplacementNamed(context, HomeScreen.id);
+    }
   }
 }
