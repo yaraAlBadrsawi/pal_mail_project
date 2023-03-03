@@ -8,9 +8,37 @@ import '../widget/custom_text_filed.dart';
 import '../widget/social.dart';
 import 'home.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
   static const id = 'SignUp';
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  late TextEditingController _nameController;
+  late TextEditingController _passwordController;
+  late TextEditingController _ConfirmpasswordController;
+  late TextEditingController _emailController;
+
+  @override
+  void initState() {
+    super.initState();
+    _nameController = TextEditingController();
+    _passwordController = TextEditingController();
+    _ConfirmpasswordController = TextEditingController();
+    _emailController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _passwordController.dispose();
+    _ConfirmpasswordController.dispose();
+    _emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +52,15 @@ class SignUp extends StatelessWidget {
               height: 25.h,
             ),
             CustomTextFiled(
-              hintText: 'Enter email or username',
+              hintText: 'Enter email',
+              controller: _emailController,
+            ),
+            SizedBox(
+              height: 25.h,
+            ),
+            CustomTextFiled(
+              hintText: 'Enter username',
+              controller: _nameController,
             ),
             SizedBox(
               height: 25.h,
@@ -32,6 +68,7 @@ class SignUp extends StatelessWidget {
             CustomTextFiled(
               hintText: 'Password',
               obsecure: true,
+              controller: _passwordController,
             ),
             SizedBox(
               height: 25.h,
@@ -39,6 +76,7 @@ class SignUp extends StatelessWidget {
             CustomTextFiled(
               hintText: 'Confirm password',
               obsecure: true,
+              controller: _passwordController,
             ),
             SizedBox(
               height: 50.h,

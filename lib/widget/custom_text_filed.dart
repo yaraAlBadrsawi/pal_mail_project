@@ -8,12 +8,15 @@ class CustomTextFiled extends StatelessWidget {
     super.key,
     required this.hintText,
     this.obsecure = false,
+    required this.controller,
   });
   final String hintText;
   final bool obsecure;
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       obscureText: obsecure,
       decoration: InputDecoration(
         hintText: hintText,

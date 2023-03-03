@@ -4,14 +4,36 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/screens/home.dart';
 
-
 import '../utils/constant.dart';
 import '../widget/custom_text_filed.dart';
 import '../widget/social.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
   static const id = 'Login';
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  late TextEditingController _emailController;
+  late TextEditingController _passwordController;
+
+  @override
+  void initState() {
+    super.initState();
+    _emailController = TextEditingController();
+    _passwordController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +47,7 @@ class Login extends StatelessWidget {
             ),
             CustomTextFiled(
               hintText: 'Enter email or username',
+              controller: _emailController,
             ),
             SizedBox(
               height: 32.h,
@@ -32,6 +55,7 @@ class Login extends StatelessWidget {
             CustomTextFiled(
               hintText: 'Password',
               obsecure: true,
+              controller: _passwordController,
             ),
             SizedBox(
               height: 71.h,
