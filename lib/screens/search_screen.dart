@@ -95,9 +95,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 title: Text(
                   'Official Organization',
                   style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontSize: 20.0.sp,
-                      fontWeight: FontWeight.w600),
+
+                      fontSize: 18.0.sp, color: Color(0xffB2B2B2)),
                 ),
                 trailing:   TextButton(
                           onPressed: () {},
