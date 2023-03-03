@@ -6,15 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import '../utils/constant.dart';
 
 class CustomHeader extends StatelessWidget {
+  final String title;
+
   const CustomHeader({
     super.key,
-    required this.leading,
-    required this.action,
     required this.title,
   });
-  final String leading;
-  final String action;
-  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +19,11 @@ class CustomHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          '$leading',
-          style: GoogleFonts.poppins(
-              fontSize: 18.sp, color: seconderyColor),
+          'Cancel',
+          style: GoogleFonts.poppins(fontSize: 18.sp, color: seconderyColor),
         ),
         Text(
-          '$title',
+          title,
           textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
               fontSize: 18.sp,
@@ -35,7 +31,7 @@ class CustomHeader extends StatelessWidget {
               color: Colors.black),
         ),
         Text(
-          '$action',
+          'Done',
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.w600,
               fontSize: 18.sp,

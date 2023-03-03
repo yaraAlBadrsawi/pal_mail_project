@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/utils/constant.dart';
-import 'package:pal_mail_project/widget/title_bar.dart';
+import 'package:pal_mail_project/widget/custom_header.dart';
 
 class SearchFilter extends StatefulWidget {
   const SearchFilter({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _SearchFilterState extends State<SearchFilter> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TitleBar(title: ' Filter '),
+              CustomHeader(title: ' Filter '),
               SizedBox(
                 height: 40,
               ),

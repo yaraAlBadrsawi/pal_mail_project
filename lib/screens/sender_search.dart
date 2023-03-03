@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pal_mail_project/utils/constant.dart';
 
+import '../widget/custom_header.dart';
 import '../widget/search_box.dart';
-import '../widget/title_bar.dart';
 
 class SenderSearch extends StatefulWidget {
   const SenderSearch({Key? key}) : super(key: key);
-  static const String id ="SenderSearch";
-
+  static const String id = "SenderSearch";
 
   @override
   State<SenderSearch> createState() => _SenderSearchState();
@@ -20,7 +19,7 @@ class _SenderSearchState extends State<SenderSearch> {
     return SafeArea(
       child: Scaffold(
         body: Column(children: [
-          TitleBar(
+          CustomHeader(
             title: 'Sender',
           ),
           SearchBox(),
