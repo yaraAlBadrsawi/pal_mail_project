@@ -5,6 +5,7 @@ import '../widget/title_bar.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({Key? key}) : super(key: key);
+  static const String id = "CategoryScreen";
 
   @override
   State<CategoryScreen> createState() => _CategoryScreenState();
@@ -20,17 +21,53 @@ class _CategoryScreenState extends State<CategoryScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TitleBar(title: 'Category'),
+            SizedBox(
+              height: 40,
+            ),
             Container(
+              padding: EdgeInsets.all(12.0),
               decoration: roundedBox,
+              margin: EdgeInsets.all(25.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(18.0),
-                    child: Text('Official organization'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Text(
+                          "Officail organization",
+                          style: const TextStyle(fontSize: 16),
+                        ),
+                      ),
+                      Icon(Icons.check)
+                    ],
                   ),
-                  Text('NGOs'),
-                  Text('UnBorder'),
-                  Text('Others'),
+                  const Divider(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      "NGOs",
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  const Divider(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      "UnBorder",
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  const Divider(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      "Others",
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ),
                 ],
               ),
             ),

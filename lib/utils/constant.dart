@@ -15,7 +15,7 @@ const Color greenCatColor = Color(0xff77D16F);
 BoxDecoration roundedBox = BoxDecoration(
   color: Colors.white,
   borderRadius: BorderRadius.all(
-    Radius.circular(30.r),
+    Radius.circular(35.r),
   ),
 );
 
