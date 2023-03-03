@@ -35,8 +35,10 @@ class _SearchScreenState extends State<SearchScreen> {
           color: seconderyColor,
         ),
       ),
-      body: Padding(
+      body: Container (
         padding: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.all(8.0),
+
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -62,9 +64,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   ],
                 ),
               ),
-              Divider(
-                thickness: 2.0,
-              ),
+
               // Padding(
               //   padding: const EdgeInsets.all(8.0),
               //   child: Row(
