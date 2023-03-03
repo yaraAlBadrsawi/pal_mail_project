@@ -28,25 +28,13 @@ class _NewInboxState extends State<NewInbox> {
           child: ListView(
             children: [
               CustomHeader(
-                leading: 'cancel',
-                action: 'Done',
                 title: 'New Inbox',
               ),
               SizedBox(
                 height: 16.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color:primaryColor.withOpacity(.1),
-                        blurRadius: 6.0,
-                        spreadRadius: 1.0,
-                        offset: Offset(0.0, 0.0), // soften the shadow
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40.r)),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -94,8 +82,7 @@ class _NewInboxState extends State<NewInbox> {
                           Text(
                             'others',
                             style: GoogleFonts.poppins(
-                                fontSize: 14.0.sp,
-                                color:subTitleColor),
+                                fontSize: 14.0.sp, color: subTitleColor),
                           ),
                           SizedBox(
                             width: 8.w,
@@ -103,7 +90,7 @@ class _NewInboxState extends State<NewInbox> {
                           FaIcon(
                             FontAwesomeIcons.angleRight,
                             size: 12,
-                            color:subTitleColor,
+                            color: subTitleColor,
                           ),
                         ],
                       ),
@@ -115,17 +102,7 @@ class _NewInboxState extends State<NewInbox> {
                 height: 16.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: primaryColor.withOpacity(.1),
-                        blurRadius: 6.0,
-                        spreadRadius: 1.0,
-                        offset: Offset(0.0, 0.0), // soften the shadow
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40.r)),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -140,7 +117,7 @@ class _NewInboxState extends State<NewInbox> {
                       ),
                       Divider(
                         thickness: .3,
-                        color:subTitleColor,
+                        color: subTitleColor,
                       ),
                       Text(
                         'Description',
@@ -157,17 +134,7 @@ class _NewInboxState extends State<NewInbox> {
                 height: 16.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color:primaryColor.withOpacity(.1),
-                        blurRadius: 6.0,
-                        spreadRadius: 1.0,
-                        offset: Offset(0.0, 0.0), // soften the shadow
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40.r)),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -198,7 +165,7 @@ class _NewInboxState extends State<NewInbox> {
                                 'Tuesday, July 5, 2022',
                                 style: GoogleFonts.poppins(
                                   fontSize: 14.0.sp,
-                                  color:seconderyColor,
+                                  color: seconderyColor,
                                 ),
                               ),
                             ],
@@ -249,18 +216,7 @@ class _NewInboxState extends State<NewInbox> {
                 height: 20.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(50.r),
-                  boxShadow: [
-                    BoxShadow(
-                      color: primaryColor.withOpacity(.1),
-                      blurRadius: 6.0,
-                      spreadRadius: 1.0,
-                      offset: Offset(0.0, 0.0), // soften the shadow
-                    ),
-                  ],
-                ),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: EdgeInsets.only(
                     left: 16.w,
@@ -304,18 +260,7 @@ class _NewInboxState extends State<NewInbox> {
               ),
               Container(
                 height: 56.h,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(50.r),
-                  boxShadow: [
-                    BoxShadow(
-                      color: primaryColor.withOpacity(.1),
-                      blurRadius: 6.0,
-                      spreadRadius: 1.0,
-                      offset: Offset(0.0, 0.0), // soften the shadow
-                    ),
-                  ],
-                ),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: EdgeInsets.only(
                     left: 16.w,
@@ -365,17 +310,7 @@ class _NewInboxState extends State<NewInbox> {
                 height: 16.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: primaryColor.withOpacity(.1),
-                        blurRadius: 6.0,
-                        spreadRadius: 1.0,
-                        offset: Offset(0.0, 0.0), // soften the shadow
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40.r)),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
@@ -401,17 +336,7 @@ class _NewInboxState extends State<NewInbox> {
                 height: 16.h,
               ),
               Container(
-                decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color:primaryColor.withOpacity(.1),
-                        blurRadius: 6.0,
-                        spreadRadius: 1.0,
-                        offset: Offset(0.0, 0.0), // soften the shadow
-                      ),
-                    ],
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40.r)),
+                decoration: inboxDecoration,
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
@@ -431,7 +356,7 @@ class _NewInboxState extends State<NewInbox> {
                 child: ExpansionTile(
                   initiallyExpanded: true,
                   onExpansionChanged: (bool expanding) =>
-                      setState(() => this.isExpanded2 = expanding),
+                      setState(() => isExpanded2 = expanding),
                   title: Text(
                     'Activity',
                     style: GoogleFonts.poppins(
@@ -444,23 +369,11 @@ class _NewInboxState extends State<NewInbox> {
                         ? FontAwesomeIcons.angleUp
                         : FontAwesomeIcons.angleDown,
                     size: 16,
-                    color: isExpanded2
-                        ? seconderyColor
-                        : subTitleColor,
+                    color: isExpanded2 ? seconderyColor : subTitleColor,
                   ),
                   children: <Widget>[
                     Container(
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: primaryColor.withOpacity(.1),
-                              blurRadius: 6.0,
-                              spreadRadius: 1.0,
-                              offset: Offset(0.0, 0.0), // soften the shadow
-                            ),
-                          ],
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(40.r)),
+                      decoration: inboxDecoration,
                       child: Padding(
                         padding: const EdgeInsets.all(16),
                         child: Column(
@@ -488,8 +401,7 @@ class _NewInboxState extends State<NewInbox> {
                                 Text(
                                   'Today, 11:00 AM',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 12.0.sp,
-                                      color: subTitleColor),
+                                      fontSize: 12.0.sp, color: subTitleColor),
                                 ),
                                 SizedBox(
                                   width: 8.w,
@@ -523,17 +435,7 @@ class _NewInboxState extends State<NewInbox> {
                       height: 8.h,
                     ),
                     Container(
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: primaryColor.withOpacity(.1),
-                              blurRadius: 6.0,
-                              spreadRadius: 1.0,
-                              offset: Offset(0.0, 0.0), // soften the shadow
-                            ),
-                          ],
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(40.r)),
+                      decoration: inboxDecoration,
                       child: Padding(
                         padding: const EdgeInsets.all(16),
                         child: Column(
@@ -561,8 +463,7 @@ class _NewInboxState extends State<NewInbox> {
                                 Text(
                                   'Today, 11:00 AM',
                                   style: GoogleFonts.poppins(
-                                      fontSize: 12.0.sp,
-                                      color:subTitleColor),
+                                      fontSize: 12.0.sp, color: subTitleColor),
                                 ),
                                 SizedBox(
                                   width: 8.w,
@@ -599,15 +500,13 @@ class _NewInboxState extends State<NewInbox> {
                 height: 16.h,
               ),
               TextField(
-                maxLines: null,
-                minLines: null,
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xffEEEEF6),
+                    fillColor: const Color(0xffEEEEF6),
                     hintText: 'Add new Activity …',
                     hintStyle: GoogleFonts.poppins(
                       fontSize: 20.sp,
-                      color: Color(0xffAFAFAF),
+                      color: const Color(0xffAFAFAF),
                     ),
                     contentPadding: EdgeInsets.symmetric(
                       vertical: 20.h,
