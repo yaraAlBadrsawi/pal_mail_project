@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../utils/constant.dart';
-import '../widget/title_bar.dart';
+import '../widget/custom_header.dart';
 
 class StatusScreen extends StatefulWidget {
   static const String id = 'StatusScreen';
@@ -19,7 +18,7 @@ class _StatusScreenState extends State<StatusScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            TitleBar(title: 'Status'),
+            CustomHeader(title: 'Status'),
             SizedBox(
               height: 40,
             ),
