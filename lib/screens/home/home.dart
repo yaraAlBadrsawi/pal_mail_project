@@ -4,11 +4,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/screens/search_screen.dart';
 import 'package:pal_mail_project/utils/constant.dart';
-import '../widget/category_widget.dart';
-import '../widget/organization_name_box.dart';
-import '../widget/search_box.dart';
-import '../widget/tag_container.dart';
-import 'new_inbox.dart';
+import '../../widget/category_widget.dart';
+import '../../widget/organization_name_box.dart';
+import '../../widget/search_box.dart';
+import '../../widget/tag_container.dart';
+import '../new_inbox.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
