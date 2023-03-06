@@ -6,9 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pal_mail_project/screens/home/home.dart';
 import 'package:pal_mail_project/screens/tag_screen.dart';
+import 'package:pal_mail_project/widget/custom_text_filed.dart';
 
 import '../utils/constant.dart';
+import '../widget/category_container.dart';
 import '../widget/custom_header.dart';
+import 'category.dart';
 
 class NewInbox extends StatefulWidget {
   const NewInbox({Key? key}) : super(key: key);
@@ -63,13 +66,6 @@ class _NewInboxState extends State<NewInbox> {
                               color: Color(0xff707070),
                             ),
                           ),
-                          Text(
-                            'Sender',
-                            style: GoogleFonts.poppins(
-                                color: Color(0xffAFAFAF),
-                                fontSize: 18.0.sp,
-                                fontWeight: FontWeight.w600),
-                          ),
                           Spacer(),
                           FaIcon(
                             FontAwesomeIcons.circleInfo,
@@ -78,33 +74,40 @@ class _NewInboxState extends State<NewInbox> {
                           ),
                         ],
                       ),
-                      Divider(
-                        thickness: .3,
-                        color: subTitleColor,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            'Category',
-                            style: GoogleFonts.poppins(
-                              fontSize: 18.0.sp,
+                      // Divider(
+                      //   thickness: .3,
+                      //   color: subTitleColor,
+                      // ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, CategoryScreen.id);
+                        },
+                        style:
+                            TextButton.styleFrom(foregroundColor: Colors.black),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Category',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18.0.sp,
+                              ),
                             ),
-                          ),
-                          Spacer(),
-                          Text(
-                            'others',
-                            style: GoogleFonts.poppins(
-                                fontSize: 14.0.sp, color: subTitleColor),
-                          ),
-                          SizedBox(
-                            width: 8.w,
-                          ),
-                          FaIcon(
-                            FontAwesomeIcons.angleRight,
-                            size: 12,
-                            color: subTitleColor,
-                          ),
-                        ],
+                            Spacer(),
+                            Text(
+                              'others',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 14.0.sp, color: subTitleColor),
+                            ),
+                            SizedBox(
+                              width: 8.w,
+                            ),
+                            FaIcon(
+                              FontAwesomeIcons.angleRight,
+                              size: 12,
+                              color: subTitleColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -120,23 +123,20 @@ class _NewInboxState extends State<NewInbox> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Title of mail',
-                        style: GoogleFonts.poppins(
-                            color: Color(0xffAFAFAF),
-                            fontSize: 18.0.sp,
-                            fontWeight: FontWeight.w600),
+                      CustomTextFiled(
+                        hintText: 'Title of mail',
+                        controller: TextEditingController(),
+                        isBold: FontWeight.bold,
+                        fontSize: 20,
                       ),
                       Divider(
                         thickness: .3,
                         color: subTitleColor,
                       ),
-                      Text(
-                        'Description',
-                        style: GoogleFonts.poppins(
-                          fontSize: 14.0.sp,
-                          color: subTitleColor,
-                        ),
+                      CustomTextFiled(
+                        hintText: 'Description',
+                        borderWidth: 0,
+                        controller: TextEditingController(),
                       ),
                     ],
                   ),
@@ -248,10 +248,17 @@ class _NewInboxState extends State<NewInbox> {
                           SizedBox(
                             width: 16.w,
                           ),
-                          Text(
-                            'Tags ',
-                            style: GoogleFonts.poppins(
-                              fontSize: 16.sp,
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, TagScreen.id);
+                            },
+                            style: TextButton.styleFrom(
+                                foregroundColor: Colors.black),
+                            child: Text(
+                              'Tags ',
+                              style: GoogleFonts.poppins(
+                                fontSize: 16.sp,
+                              ),
                             ),
                           ),
                         ],
@@ -292,21 +299,7 @@ class _NewInboxState extends State<NewInbox> {
                           SizedBox(
                             width: 16.w,
                           ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(30.r)),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                'Inbox',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 16.sp,
-                                    color: Colors.white),
-                              ),
-                            ),
-                          ),
+                          CategoryContainer(text: 'inbox', color: redCatColor),
                         ],
                       ),
                       IconButton(
@@ -335,12 +328,9 @@ class _NewInboxState extends State<NewInbox> {
                         style: GoogleFonts.poppins(
                             fontSize: 18.0.sp, fontWeight: FontWeight.w600),
                       ),
-                      Text(
-                        'Add Decision…',
-                        style: GoogleFonts.poppins(
-                          fontSize: 14.0.sp,
-                          color: subTitleColor,
-                        ),
+                      CustomTextFiled(
+                        hintText: 'Add Decision…',
+                        controller: TextEditingController(),
                       ),
                     ],
                   ),

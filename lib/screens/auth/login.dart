@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pal_mail_project/screens/home/home.dart';
-
-import '../../api/Auth/auth_api_controller.dart';
+import '../../api_services/auth/auth_api_controller.dart';
 import '../../utils/constant.dart';
 import '../../widget/custom_text_filed.dart';
 import '../../widget/social.dart';
@@ -21,6 +20,7 @@ class _LoginState extends State<Login> {
   late TextEditingController _emailController;
   late TextEditingController _passwordController;
 
+  bool isLoading = true;
   @override
   void initState() {
     super.initState();
@@ -64,20 +64,21 @@ class _LoginState extends State<Login> {
             TextButton(
               onPressed: () async {
                 print('data');
-
                 await _performLogin();
               },
               child: Container(
                 width: double.infinity,
                 height: 48.h,
                 child: Center(
-                    child: Text(
-                  'SIGN IN',
-                  style: GoogleFonts.poppins(
-                    fontSize: 14.sp,
-                    color: Colors.white,
-                  ),
-                )),
+                    child: isLoading
+                        ? Text(
+                            'SIGN IN',
+                            style: GoogleFonts.poppins(
+                              fontSize: 14.sp,
+                              color: Colors.white,
+                            ),
+                          )
+                        : CircularProgressIndicator()),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22),
                     gradient: LinearGradient(
@@ -97,7 +98,7 @@ class _LoginState extends State<Login> {
                 'OR',
                 style: GoogleFonts.poppins(
                   fontSize: 14.sp,
-                  color: Color(0xffA8A7A7),
+                  color: const Color(0xffA8A7A7),
                 ),
               ),
             ),
@@ -129,6 +130,8 @@ class _LoginState extends State<Login> {
   }
 
   Future<void> _performLogin() async {
+    isLoading = false;
+
     if (_checkData()) {
       await _login();
     }

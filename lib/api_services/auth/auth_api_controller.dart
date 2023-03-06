@@ -10,7 +10,7 @@ class AuthApiController {
       {required BuildContext,
       required String email,
       required String password}) async {
-    Uri uri = Uri.parse(ApiSettings.login);
+    Uri uri = Uri.parse(ApiSettings.loginURL);
     http.Response response = await http.post(
       uri,
       body: {
@@ -39,7 +39,7 @@ class AuthApiController {
 
   Future<bool> register(
       {required BuildContext BuildContext, required User user}) async {
-    Uri uri = Uri.parse(ApiSettings.register);
+    Uri uri = Uri.parse(ApiSettings.registerURL);
     http.Response response = await http.post(uri, body: {
       'email': user.email,
       'password': user.password,

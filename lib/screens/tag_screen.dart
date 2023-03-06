@@ -6,7 +6,6 @@ import '../utils/constant.dart';
 
 class TagScreen extends StatelessWidget {
   static const String id = 'TagScreen';
-
   const TagScreen({Key? key}) : super(key: key);
 
   @override

@@ -24,7 +24,7 @@ class CategoryContainer extends StatelessWidget {
           style: GoogleFonts.poppins(
               fontWeight: FontWeight.w600,
               fontSize: 16.sp,
-              color: Colors.black),
+              color: Colors.white),
         ),
       ),
     );

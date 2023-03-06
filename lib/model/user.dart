@@ -43,17 +43,17 @@ class User {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['email'] = this.email;
-    data['image'] = this.image;
-    data['email_verified_at'] = this.emailVerifiedAt;
-    data['role_id'] = this.roleId;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    if (this.role != null) {
-      data['role'] = this.role.toJson();
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['id'] = id;
+    data['name'] = name;
+    data['email'] = email;
+    data['image'] = image;
+    data['email_verified_at'] = emailVerifiedAt;
+    data['role_id'] = roleId;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    if (role != null) {
+      data['role'] = role.toJson();
     }
     return data;
   }

@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../api/Auth/auth_api_controller.dart';
+import '../../api_services/auth/auth_api_controller.dart';
 import '../../model/user.dart';
 import '../../utils/constant.dart';
 import '../../widget/custom_text_filed.dart';
